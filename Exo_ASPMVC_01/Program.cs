@@ -1,7 +1,13 @@
+using System.Text.Encodings.Web;
+using System.Text.Unicode;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+// Ajout du support des emojis 🥰
+builder.Services.AddSingleton<HtmlEncoder>(HtmlEncoder.Create(UnicodeRanges.All));
 
 var app = builder.Build();
 

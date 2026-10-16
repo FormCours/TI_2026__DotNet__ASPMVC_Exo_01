@@ -34,7 +34,7 @@
     </script>
 </head>
 
-<body>
+<body class="min-vh-100 d-flex flex-column">
     <!--headder-->
     <div class="header-outs inner_page-banner " id="home">
         <div class="headder-top">
@@ -52,7 +52,16 @@
                         <a asp-area="" asp-controller="Home" asp-action="Index">Accueil</a>
                     </li>
                     <li class="mx-lg-3 mx-md-2 my-md-0 my-1">
-                        <a asp-area="" asp-controller="Home" asp-action="DoIt">Correction</a>
+                        <a asp-area="" asp-controller="Destination" asp-action="Index">Destination</a>
+                    </li>
+                    <li class="mx-lg-3 mx-md-2 my-md-0 my-1">
+                        <a asp-area="" asp-controller="Blog" asp-action="Index">Blog</a>
+                    </li>
+                    <li class="mx-lg-3 mx-md-2 my-md-0 my-1">
+                        <a asp-area="" asp-controller="Home" asp-action="About">A propos</a>
+                    </li>
+                    <li class="mx-lg-3 mx-md-2 my-md-0 my-1">
+                        <a asp-area="" asp-controller="Home" asp-action="Contact">Nous contacter</a>
                     </li>
                 </ul>
             </nav>
@@ -60,52 +69,17 @@
         </div>
     </div>
     <!-- //header -->
-    <div class="container-fluid">
+    <div class="flex-grow-1">
         @RenderBody()
     </div>
     <!-- footer -->
-    <footer class="py-lg-3 py-md-2 py-sm-3 py-2">
-        <div class="container py-lg-4 py-md-4 py-sm-3 py-3">
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-6 footer-bottom-txt">
-                    <div class="footer-icons pt-lg-5 pt-md-4 mt-3">
-                        <ul>
-                            <li>
-                                <a href="#">
-                                    <span class="fa fa-facebook mr-lg-3 mr-2"></span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="fa fa-twitter mr-lg-3 mr-2"></span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="fa fa-rss mr-lg-3 mr-2"></span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="fa fa-envelope mr-lg-3 mr-2"></span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="fa fa-instagram mr-lg-3 mr-2"></span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+    <footer class="py-lg-2 py-md-1 py-sm-2 py-1">
             <!-- move icon -->
             <div class="text-center">
-                <a href="#home" class="move-top text-center mt-3">
+                <a href="#home" class="move-top text-center mt-2">
                     <span class="fa fa-arrow-up" aria-hidden="true"></span>
                 </a>
             </div>
-        </div>
         <!--//move icon -->
     </footer>
     <!--//footer -->
