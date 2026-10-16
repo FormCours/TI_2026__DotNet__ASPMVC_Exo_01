@@ -23,6 +23,7 @@
     <!--//stylesheets-->
     <link href="//fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+    @await RenderSectionAsync("StylePerso", required: false)
     <script>
             addEventListener("load", function () {
                 setTimeout(hideURLbar, 0);
@@ -36,52 +37,13 @@
 
 <body class="min-vh-100 d-flex flex-column">
     <!--headder-->
-    <div class="header-outs inner_page-banner " id="home">
-        <div class="headder-top">
-            <!-- nav -->
-            <nav>
-                <div id="logo">
-                    <h1>
-                        <a asp-area="" asp-controller="Home" asp-action="Index">Sail-Trip</a>
-                    </h1>
-                </div>
-                <label for="drop" class="toggle">Menu</label>
-                <input type="checkbox" id="drop">
-                <ul class="menu mt-2">
-                    <li class="active">
-                        <a asp-area="" asp-controller="Home" asp-action="Index">Accueil</a>
-                    </li>
-                    <li class="mx-lg-3 mx-md-2 my-md-0 my-1">
-                        <a asp-area="" asp-controller="Destination" asp-action="Index">Destination</a>
-                    </li>
-                    <li class="mx-lg-3 mx-md-2 my-md-0 my-1">
-                        <a asp-area="" asp-controller="Blog" asp-action="Index">Blog</a>
-                    </li>
-                    <li class="mx-lg-3 mx-md-2 my-md-0 my-1">
-                        <a asp-area="" asp-controller="Home" asp-action="About">A propos</a>
-                    </li>
-                    <li class="mx-lg-3 mx-md-2 my-md-0 my-1">
-                        <a asp-area="" asp-controller="Home" asp-action="Contact">Nous contacter</a>
-                    </li>
-                </ul>
-            </nav>
-            <!-- //nav -->
-        </div>
-    </div>
+    <partial name= "Partial/_Header" />
     <!-- //header -->
     <div class="flex-grow-1">
         @RenderBody()
     </div>
     <!-- footer -->
-    <footer class="py-lg-2 py-md-1 py-sm-2 py-1">
-            <!-- move icon -->
-            <div class="text-center">
-                <a href="#home" class="move-top text-center mt-2">
-                    <span class="fa fa-arrow-up" aria-hidden="true"></span>
-                </a>
-            </div>
-        <!--//move icon -->
-    </footer>
+    <partial name="Partial/_Footer" />
     <!--//footer -->
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)

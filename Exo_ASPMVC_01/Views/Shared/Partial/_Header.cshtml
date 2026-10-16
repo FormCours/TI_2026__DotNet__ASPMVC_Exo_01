@@ -1,0 +1,32 @@
+﻿<header class="header-outs inner_page-banner " id="home">
+    <div class="headder-top">
+        <!-- nav -->
+        <nav>
+            <div id="logo">
+                <h1>
+                    <a asp-area="" asp-controller="Home" asp-action="Index">Sail-Trip</a>
+                </h1>
+            </div>
+            <label for="drop" class="toggle">Menu</label>
+            <input type="checkbox" id="drop">
+            <ul class="menu mt-2">
+                <li class="active">
+                    <a asp-area="" asp-controller="Home" asp-action="Index">Accueil</a>
+                </li>
+                <li class="mx-lg-3 mx-md-2 my-md-0 my-1">
+                    <a asp-area="" asp-controller="Destination" asp-action="Index">Destination</a>
+                </li>
+                <li class="mx-lg-3 mx-md-2 my-md-0 my-1">
+                    <a asp-area="" asp-controller="Blog" asp-action="Index">Blog</a>
+                </li>
+                <li class="mx-lg-3 mx-md-2 my-md-0 my-1">
+                    <a asp-area="" asp-controller="Home" asp-action="About">A propos</a>
+                </li>
+                <li class="mx-lg-3 mx-md-2 my-md-0 my-1">
+                    <a asp-area="" asp-controller="Home" asp-action="Contact">Nous contacter</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- //nav -->
+    </div>
+</header>
