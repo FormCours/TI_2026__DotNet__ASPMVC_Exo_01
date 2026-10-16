@@ -1,8 +1,5 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@model ContactForm
+
 <section>
     <div class="container py-lg-3 py-md-2 py-sm-2 py-1">
         <div class="row">
@@ -15,19 +12,19 @@
             <div class="col-12 contact-form-txt">
                 <form action="#" method="post">
                     <div class="form-group contact-forms">
-                        <input type="text" class="form-control" placeholder="Prénom" aria-label="Prenom" required="">
+                        <input asp-for="FirstName"  class="form-control" placeholder="Prénom" aria-label="Prenom">
                     </div>
                     <div class="form-group contact-forms">
-                        <input type="text" class="form-control" placeholder="Nom" aria-label="Nom" required="">
+                        <input asp-for="LastName" class="form-control" placeholder="Nom" aria-label="Nom">
                     </div>
                     <div class="form-group contact-forms">
-                        <input type="email" class="form-control" placeholder="Couriel" aria-label="Couriel" required="">
+                        <input asp-for="Email" class="form-control" placeholder="Couriel" aria-label="Couriel">
                     </div>
                     <div class="form-group contact-forms">
-                        <input type="text" class="form-control" placeholder="Tel" aria-label="Tel" required="">
+                        <input asp-for="Tel" class="form-control" placeholder="Tel" aria-label="Tel">
                     </div>
                     <div class="form-group contact-forms">
-                        <textarea class="form-control" placeholder="Message" aria-label="Message" rows="5" required=""></textarea>
+                        <textarea asp-for="Message" class="form-control" placeholder="Message" aria-label="Message" rows="5"></textarea>
                     </div>
                     <button type="submit" class="btn sent-butnn">Send</button>
                 </form>

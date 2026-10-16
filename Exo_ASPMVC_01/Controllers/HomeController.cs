@@ -18,7 +18,19 @@ namespace Exo_ASPMVC_01.Controllers
 
         public IActionResult Contact()
         {
+
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult Contact(ContactForm contactForm)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(contactForm);
+            }
+
+            return RedirectToAction(nameof(Index));
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
